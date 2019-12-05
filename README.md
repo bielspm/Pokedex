@@ -1,12 +1,15 @@
-#teste-aeogi
+# teste-aeogi
 Teste pra vaga de estagio
-#Tela de busca
+# Tela de busca - TELA 1
 <img src="imgs/index.png" width="574px" height="244px">
-#Tela de resultados
+<hr>
+# Tela de resultados - TELA 2
 <img src="imgs/resultados.png" width="486px" height="246px">
-#Pokemon
+<hr>
+# Pokemon - TELA 3
 <img src="imgs/pokemon.png" width="843px" height="503px">
-##Instruções para o teste
+<hr>
+## Instruções para o teste
 
 Foi usado Python 3.7 , Mysql 8.0 , Django 2.2.
 
