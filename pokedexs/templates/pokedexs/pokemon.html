@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>{{ pokemon.pokemon_name }}</title>
+</head>
+<body>
+	<div class="col-md-6 mx-auto">
+	<h1>{{ pokemon.pokemon_name|capfirst }} <spam class="text-muted">#{{ pokemon.pokemon_number}}</spam></h1>
+		<div class="row">
+			<div class="col-md-6">
+				<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{ pok_id_full }}.png" height="100%" width="100%">
+			</div>
+			<div class="col-md-6">
+				<p>Attack: {{pokemon.attack}}</p>
+				<p>Classificação: {{pokemon.classfication}}</p>
+				<p>Defesa: {{pokemon.defense}}</p>
+				<p>Altura: {{pokemon.height_m}}</p>
+				<p>HP: {{pokemon.hp}}</p>
+				<p>Speed: {{pokemon.speed}}</p>
+				<p>Tipo: {{pokemon.type1}}</p>
+				{% if pokemon.type2 %}
+					<p>Tipo 2: {{ pokemon.type2 }}</p>
+				{% endif %}
+				<p>Peso: {{pokemon.weight_kg}}</p>
+				<p>Geração: {{pokemon.generation}}</p>
+				<p>Lendario: {{ lendario }}</p>
+				<p>Habilidades: {{pokemon.abilities}}</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Resultado</title>
+</head>
+<body>
+	<div class="col-md-6 mx-auto">
+	<h1>Resultados:</h1>
+		{% if resultados %}
+			{% for resultado in resultados %}
+				<div class="border d-inline-block p-3 rounded">
+					<h3>Pokemon: <spam class="font-weight-light">{{ resultado.pokemon_name }}</spam></h3>
+					<h3>ID: <spam class="font-weight-light">{{ resultado.pokemon_number }}</spam></h3>
+					<p><a class="btn btn-info" href="{% url 'pokemon' resultado.pokemon_number %}">Ver</a></p>
+				</div>
+			{% endfor %}
+		{% endif %}
+		{% if pokemon %}
+			<div class="border d-inline-block p-3 rounded">
+			<h3>Pokemon: <spam class="font-weight-light">{{ pokemon.pokemon_name }}</spam></h3>
+			<h3>ID: <spam class="font-weight-light">{{ pokemon.pokemon_number }}</spam></h3>
+			<p><a class="btn btn-info" href="{% url 'pokemon' pokemon.pokemon_number %}">Ver</a></p>
+			</div>
+		{% endif %}
+	</div>
+</body>
+</html>
