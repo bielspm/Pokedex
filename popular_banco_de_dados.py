@@ -4,7 +4,7 @@ import mysql.connector
 from mysql.connector import errorcode
 
 try:
-    conexaoBD = mysql.connector.connect(host='localhost',user='root',database='pokedex',password='CounterSTRIKE15')
+    conexaoBD = mysql.connector.connect(host='localhost',user='root',database='pokedex',password='')
     dbcursor = conexaoBD.cursor()
     with open('pokemon.csv', 'r') as f:
         reader = csv.reader(f)
