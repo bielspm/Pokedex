@@ -1,5 +1,4 @@
-# teste-aeogi
-Teste pra vaga de estagio
+# Pokedex
 # Tela de busca - TELA 1
 <img src="imgs/index.png" width="574px" height="244px">
 <hr>
